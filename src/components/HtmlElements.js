@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'components/Router'
+import { Link } from './Router'
 
 import { dist, snippets, breakpoints } from '../../config/styles'
  

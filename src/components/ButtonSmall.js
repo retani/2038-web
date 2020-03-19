@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { metrics, dist, colors, textStyle } from '../config/styles'
+import { metrics, dist, colors, textStyle } from '../../config/styles'
 
 const themes={
   "white-on-blue": {

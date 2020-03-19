@@ -6,43 +6,52 @@ import { Content, ContentBlock } from "../blocks/content"
 import { Countdown, CountdownBlock } from "../blocks/Countdown"
 import { TalkingHeads, TalkingHeadsBlock } from '../blocks/TalkingHeads'
 import { PageLayout } from "../components/pageLayout"
+import { globalStyles } from '../../config/styles'
 
 import { useLocalJsonForm } from "gatsby-tinacms-json"
+import {createGlobalStyle} from 'styled-components'
+import { Reset } from 'styled-reset'
+
+const GlobalStyle = createGlobalStyle`${globalStyles}`
 
 export default function Page({ data }) {
   const [page] = useLocalJsonForm(data.page, PageForm)
   const blocks = page.blocks ? page.blocks : []
 
   return (
-    <PageLayout page={page}>
-      {blocks &&
-        blocks.map(({ _template, ...data }, i) => {
-          switch (_template) {
-            case "TitleBlock":
-              return <Title page={page} data={data} />
-            case "ImageBlock":
-              return <Image data={data} />
-            case "CountdownBlock":
-              return <Countdown key={"CountdownBlock" + i} data={data} />
-            case "TalkingHeadsBlock":
-              return <TalkingHeads key={"TalkingHeadsBlock" + i} data={data} />                                
-            case "ContentBlock":
-              if (data.content && page.childrenPagesJsonBlockMarkdown[i])
-                return (
-                  <Content
-                    data={data}
-                    html={
-                      page.childrenPagesJsonBlockMarkdown[i]
-                        .childMarkdownRemark.html
-                    }
-                  />
-                )
-              break
-            default:
-              return true
-          }
-        })}
-    </PageLayout>
+    <>
+      <Reset />
+      <GlobalStyle />
+      <PageLayout page={page}>
+        {blocks &&
+          blocks.map(({ _template, ...data }, i) => {
+            switch (_template) {
+              case "TitleBlock":
+                return <Title page={page} data={data} />
+              case "ImageBlock":
+                return <Image data={data} />
+              case "CountdownBlock":
+                return <Countdown key={"CountdownBlock" + i} data={data} />
+              case "TalkingHeadsBlock":
+                return <TalkingHeads key={"TalkingHeadsBlock" + i} data={data} />                                
+              case "ContentBlock":
+                if (data.content && page.childrenPagesJsonBlockMarkdown[i])
+                  return (
+                    <Content
+                      data={data}
+                      html={
+                        page.childrenPagesJsonBlockMarkdown[i]
+                          .childMarkdownRemark.html
+                      }
+                    />
+                  )
+                break
+              default:
+                return true
+            }
+          })}
+      </PageLayout>
+    </>
   )
 }
 

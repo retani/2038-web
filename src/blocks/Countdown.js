@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-import { colors, breakpoints, metrics } from '../../config/styles'
+import { colors, breakpoints } from '../../config/styles'
 import Accordion from '../components/Accordion'
+import DownloadLink from '../components/DownloadLink'
+import Spacer from '../components/Spacer'
 
 const numberTimes = {
   week: 1000 * 60 * 60 * 24 * 7,
@@ -13,7 +15,7 @@ const numberTimes = {
 };
 
 function renderOffsetObject(distance) {
-  const { week, day, hour, minute, second } = numberTimes;
+  const { day, hour, minute, second } = numberTimes;
   distance += second
   const hours = Math.floor((distance % day) / hour);
   const minutes = Math.floor((distance % hour) / minute);
@@ -28,7 +30,7 @@ function renderOffsetObject(distance) {
 
 export const Countdown = (data) =>  {
   
-  const {children, dateUTC} = data
+  const {children, dateUTC} = data.data
 
   const parts = dateUTC ? dateUTC.split("-") : "0-0-0-0-0"
   //if (parts.length !== 5) {
@@ -58,7 +60,7 @@ export const Countdown = (data) =>  {
     const nowUTC = Math.floor((new Date()).getTime())
     setOffset(date.valueOf() - nowUTC)
     return( () => clearInterval(handler))
-  }, [])
+  }, [date])
 
   const o = renderOffsetObject(offset)
   const small = vw <= breakpoints.smallPx
@@ -77,8 +79,8 @@ export const Countdown = (data) =>  {
         backgroundColorClosed={colors.green} 
         backgroundColorOpen={colors.turquoise}
       >
-      {children}
-
+      <DownloadLink href="/opening-2038.ics" text="iCal" textOffset="1px" size="small"/>
+      <Spacer onlySmall />
     </Accordion>
   </Div>
 }
