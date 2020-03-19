@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { mix } from "polished"
-import { ThemeProvider } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { GlobalStyles, bestContrast } from "./style"
 
@@ -70,24 +69,10 @@ export const Theme = ({ children }) => {
   }
 
   return (
-    <ThemeContext.Provider
-      value={{
-        theme: theme,
-        toggleDarkMode: toggleDarkMode,
-        isDarkMode: darkMode,
-      }}
-    >
-      <ThemeContext.Consumer>
-        {({ theme }) => (
-          <ThemeProvider theme={theme}>
-            <>
-              <GlobalStyles />
-              {children}
-            </>
-          </ThemeProvider>
-        )}
-      </ThemeContext.Consumer>
-    </ThemeContext.Provider>
+    <>
+      <GlobalStyles />
+      {children}
+    </>
   )
 }
 

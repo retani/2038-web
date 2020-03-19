@@ -117,29 +117,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-      lists: allPagesJson(
-        filter: { path: { ne: null }, listType: { ne: null } }
-      ) {
-        edges {
-          node {
-            path
-            listType
-          }
-        }
-      }
-      posts: allMarkdownRemark(
-        filter: { frontmatter: { path: { ne: null } } }
-      ) {
-        edges {
-          node {
-            published
-            frontmatter {
-              path
-              type
-            }
-          }
-        }
-      }
     }
   `)
 
@@ -156,43 +133,4 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 
-  result.data.posts.edges.forEach(({ node }) => {
-    if (!node.published) return
-
-    createPage({
-      path: node.frontmatter.path,
-      component: path.resolve(`src/templates/post.js`),
-      context: {},
-    })
-  })
-
-  result.data.lists.edges.forEach(({ node }) => {
-    const listPageTemplate = path.resolve(`src/templates/list.js`)
-    const listType = node.listType
-    const allPosts = result.data.posts.edges
-    const posts = allPosts.filter(post => post.type === listType)
-    const postsPerPage = 5
-    const numPages = Math.max(Math.ceil(posts.length / postsPerPage), 1)
-    const slug = node.path
-
-    Array.from({ length: numPages }).forEach((_, i) => {
-      const currentPage = i + 1
-      const isFirstPage = i === 0
-
-      createPage({
-        path: isFirstPage
-          ? node.path
-          : `${String(node.path)}/${String(currentPage)}`,
-        component: listPageTemplate,
-        context: {
-          listType: listType,
-          slug: slug,
-          limit: postsPerPage,
-          skip: i * postsPerPage,
-          numPages: numPages,
-          currentPage: currentPage,
-        },
-      })
-    })
-  })
 }

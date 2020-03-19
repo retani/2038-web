@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Paper } from "../components/style"
-import { Form, FormBlock } from "../blocks/form"
 import { Title, TitleBlock } from "../blocks/title"
 import { Image, ImageBlock } from "../blocks/image"
 import { Content, ContentBlock } from "../blocks/content"
+import { Countdown, CountdownBlock } from "../blocks/Countdown"
+import { TalkingHeads, TalkingHeadsBlock } from '../blocks/TalkingHeads'
 import { PageLayout } from "../components/pageLayout"
 
 import { useLocalJsonForm } from "gatsby-tinacms-json"
@@ -15,33 +15,33 @@ export default function Page({ data }) {
 
   return (
     <PageLayout page={page}>
-      <Paper>
-        {blocks &&
-          blocks.map(({ _template, ...data }, i) => {
-            switch (_template) {
-              case "TitleBlock":
-                return <Title page={page} data={data} />
-              case "ImageBlock":
-                return <Image data={data} />
-              case "FormBlock":
-                return <Form form={data} />
-              case "ContentBlock":
-                if (data.content && page.childrenPagesJsonBlockMarkdown[i])
-                  return (
-                    <Content
-                      data={data}
-                      html={
-                        page.childrenPagesJsonBlockMarkdown[i]
-                          .childMarkdownRemark.html
-                      }
-                    />
-                  )
-                break
-              default:
-                return true
-            }
-          })}
-      </Paper>
+      {blocks &&
+        blocks.map(({ _template, ...data }, i) => {
+          switch (_template) {
+            case "TitleBlock":
+              return <Title page={page} data={data} />
+            case "ImageBlock":
+              return <Image data={data} />
+            case "CountdownBlock":
+              return <Countdown key={"CountdownBlock" + i} data={data} />
+            case "TalkingHeadsBlock":
+              return <TalkingHeads key={"TalkingHeadsBlock" + i} data={data} />                                
+            case "ContentBlock":
+              if (data.content && page.childrenPagesJsonBlockMarkdown[i])
+                return (
+                  <Content
+                    data={data}
+                    html={
+                      page.childrenPagesJsonBlockMarkdown[i]
+                        .childMarkdownRemark.html
+                    }
+                  />
+                )
+              break
+            default:
+              return true
+          }
+        })}
     </PageLayout>
   )
 }
@@ -126,8 +126,9 @@ const PageForm = {
       templates: {
         TitleBlock,
         ImageBlock,
-        FormBlock,
         ContentBlock,
+        CountdownBlock,
+        TalkingHeadsBlock,
       },
     },
   ],
@@ -163,6 +164,10 @@ export const pageQuery = graphql`
         name
         title
         underline
+        dateUTC
+        videoId
+        text
+        text2
         center
         recipient
         fields {
