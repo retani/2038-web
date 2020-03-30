@@ -4,6 +4,9 @@
   "description": "A configurable starter for Gatsby & Tina",
   "version": "0.1.0",
   "author": "Scott Byrne <scott.byrne@forestry.io>",
+  "engines" : { 
+    "node" : "12" 
+  },
   "dependencies": {
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",

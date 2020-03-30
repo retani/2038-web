@@ -5,6 +5,7 @@ import { Image, ImageBlock } from "../blocks/image"
 import { Content, ContentBlock } from "../blocks/content"
 import { Countdown, CountdownBlock } from "../blocks/Countdown"
 import { TalkingHeads, TalkingHeadsBlock } from '../blocks/TalkingHeads'
+import { ImpLink, ImpLinkBlock } from '../blocks/ImpLink'
 import { PageLayout } from "../components/pageLayout"
 import { globalStyles } from '../../config/styles'
 
@@ -34,6 +35,8 @@ export default function Page({ data }) {
                 return <Countdown key={"CountdownBlock" + i} data={data} />
               case "TalkingHeadsBlock":
                 return <TalkingHeads key={"TalkingHeadsBlock" + i} data={data} />                                
+              case "ImpLinkBlock":
+                return <ImpLink key={"ImpLinkBlock" + i} data={data} />                                
               case "ContentBlock":
                 if (data.content && page.childrenPagesJsonBlockMarkdown[i])
                   return (
@@ -138,6 +141,7 @@ const PageForm = {
         ContentBlock,
         CountdownBlock,
         TalkingHeadsBlock,
+        ImpLinkBlock
       },
     },
   ],
