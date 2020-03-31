@@ -1191,6 +1191,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@tinacms/alerts@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/@tinacms/alerts/-/alerts-0.1.0.tgz#8f43de61eaac314685f2ffae5e488e1196a444d8"
+
 "@tinacms/api-git@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@tinacms/api-git/-/api-git-0.6.0.tgz#15d833cca41e25e9790d348cade2df637d86c6b6"
@@ -1201,7 +1205,7 @@
     multer "1.4.2"
     simple-git "1.126.0"
 
-"@tinacms/core@^0.7.1", "@tinacms/core@^0.7.3":
+"@tinacms/core@^0.7.1", "@tinacms/core@^0.7.2", "@tinacms/core@^0.7.3":
   version "0.7.3"
   resolved "https://registry.npmjs.org/@tinacms/core/-/core-0.7.3.tgz#764ff137b752492d32d36c6468535b9043ff6a5f"
 
@@ -1237,7 +1241,38 @@
     react-dropzone "10.1.8"
     react-select "^2.3.0"
 
-"@tinacms/form-builder@^0.2.15":
+"@tinacms/fields@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.npmjs.org/@tinacms/fields/-/fields-0.7.0.tgz#2eee21774c753eba0669e19e83a026840f4e5300"
+  dependencies:
+    "@sambego/storybook-styles" "^1.0.0"
+    "@tinacms/core" "^0.7.2"
+    "@tinacms/icons" "^0.7.0"
+    "@tinacms/styles" "^0.3.0"
+    "@types/react-select" "^2.0.11"
+    codemirror "^5.42.2"
+    color-string "^1.5.3"
+    lodash.debounce "^4.0.8"
+    lodash.get "^4.4.2"
+    markdown-it "^8.3.1"
+    prosemirror-commands "^1.0.8"
+    prosemirror-dropcursor "^1.1.2"
+    prosemirror-gapcursor "^1.0.4"
+    prosemirror-history "^1.0.4"
+    prosemirror-inputrules "^1.0.4"
+    prosemirror-keymap "^1.0.1"
+    prosemirror-model "^1.0.0"
+    prosemirror-schema-list "^1.0.3"
+    prosemirror-state "^1.2.4"
+    prosemirror-tables "1.0.0"
+    prosemirror-transform "^1.0.0"
+    prosemirror-utils "^0.9.6"
+    prosemirror-view "^1.11.3"
+    react-color "^2.17.3"
+    react-dismissible "^1.1.5"
+    react-dropzone "10.1.8"
+
+"@tinacms/form-builder@^0.2.15", "@tinacms/form-builder@^0.2.16":
   version "0.2.16"
   resolved "https://registry.npmjs.org/@tinacms/form-builder/-/form-builder-0.2.16.tgz#1397ea2cf0426f4c4497d3fdda30f861a7abc937"
   dependencies:
@@ -1267,16 +1302,40 @@
   version "0.6.0"
   resolved "https://registry.npmjs.org/@tinacms/icons/-/icons-0.6.0.tgz#752c3b38e479a7906a79af70979c2c59d3f1be59"
 
-"@tinacms/react-core@^0.2.7", "@tinacms/react-core@^0.2.8":
+"@tinacms/icons@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.npmjs.org/@tinacms/icons/-/icons-0.7.0.tgz#aaf7ff6233dd4c06b5396373e0b6d4d93fd9d47e"
+
+"@tinacms/media@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/@tinacms/media/-/media-0.1.0.tgz#ae1b57c62cfd2489d04e0b18b948e5c5fd8d9e28"
+
+"@tinacms/react-alerts@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/@tinacms/react-alerts/-/react-alerts-0.1.0.tgz#4e5b9915cc0770fc0fa16fece870782754d67975"
+
+"@tinacms/react-core@^0.2.7", "@tinacms/react-core@^0.2.8", "@tinacms/react-core@^0.2.9":
   version "0.2.9"
   resolved "https://registry.npmjs.org/@tinacms/react-core/-/react-core-0.2.9.tgz#71ac7dc88a33a53636c1ecf38c28156b647b43cd"
   dependencies:
     "@tinacms/core" "^0.7.3"
     "@tinacms/forms" "^0.3.0"
 
+"@tinacms/react-modals@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/@tinacms/react-modals/-/react-modals-0.1.0.tgz#c1cc9b36ff672e361c7d17dee5c6c57e11127ffa"
+
 "@tinacms/styles@^0.2.0":
   version "0.2.0"
   resolved "https://registry.npmjs.org/@tinacms/styles/-/styles-0.2.0.tgz#eb1f228567d53b855228eb64cc39b5cbcd0d4368"
+
+"@tinacms/styles@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.npmjs.org/@tinacms/styles/-/styles-0.3.0.tgz#a14bfa1c38e699ec0bc42c5cc333fa8b5178bc77"
+
+"@tinacms/styles@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.npmjs.org/@tinacms/styles/-/styles-0.4.0.tgz#cfb9e6ada81e556a9dfa204004ae591953780e16"
 
 "@types/configstore@^2.1.1":
   version "2.1.1"
@@ -10114,7 +10173,7 @@ react-dev-utils@^4.2.3:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dismissible@^1.1.4:
+react-dismissible@^1.1.4, react-dismissible@^1.1.5:
   version "1.1.5"
   resolved "https://registry.npmjs.org/react-dismissible/-/react-dismissible-1.1.5.tgz#363afd0b004292ad0ffb84d28406dbc86e114652"
 
@@ -10241,6 +10300,32 @@ react-side-effect@^1.1.0:
 react-slugify@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/react-slugify/-/react-slugify-2.0.1.tgz#719410fc2f6cfeb77f731d57adae4f47649ebd15"
+
+react-tinacms-editor@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/react-tinacms-editor/-/react-tinacms-editor-0.2.0.tgz#4ac0f20f4aa0aaa0b4222c19413082cfb62b5663"
+  dependencies:
+    "@tinacms/core" "^0.7.3"
+    "@tinacms/icons" "^0.7.0"
+    "@tinacms/styles" "^0.4.0"
+    codemirror "^5.42.2"
+    lodash.debounce "^4.0.8"
+    lodash.get "^4.4.2"
+    markdown-it "^8.3.1"
+    prosemirror-commands "^1.0.8"
+    prosemirror-dropcursor "^1.1.2"
+    prosemirror-gapcursor "^1.0.4"
+    prosemirror-history "^1.0.4"
+    prosemirror-inputrules "^1.0.4"
+    prosemirror-keymap "^1.0.1"
+    prosemirror-model "^1.0.0"
+    prosemirror-schema-list "^1.0.3"
+    prosemirror-state "^1.2.4"
+    prosemirror-tables "1.0.0"
+    prosemirror-transform "^1.0.0"
+    prosemirror-utils "^0.9.6"
+    prosemirror-view "^1.11.3"
+    react-dismissible "^1.1.5"
 
 react-transition-group@^2.2.1, react-transition-group@^2.5.0:
   version "2.9.0"
@@ -11997,6 +12082,29 @@ timm@^1.6.1:
 timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
+
+tinacms@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.npmjs.org/tinacms/-/tinacms-0.18.0.tgz#cd43cd27ad76f1d78c3e494f0bd972055e180c36"
+  dependencies:
+    "@tinacms/alerts" "^0.1.0"
+    "@tinacms/core" "^0.7.2"
+    "@tinacms/fields" "^0.7.0"
+    "@tinacms/form-builder" "^0.2.16"
+    "@tinacms/forms" "^0.2.1"
+    "@tinacms/icons" "^0.7.0"
+    "@tinacms/media" "^0.1.0"
+    "@tinacms/react-alerts" "^0.1.0"
+    "@tinacms/react-core" "^0.2.9"
+    "@tinacms/react-modals" "^0.1.0"
+    "@tinacms/styles" "^0.4.0"
+    "@types/react-beautiful-dnd" "^11.0.3"
+    lodash.clonedeep "^4.5.0"
+    lodash.merge "^4.6.2"
+    react-beautiful-dnd "^11.0.5"
+    react-datetime "^2.16.3"
+    react-dismissible "^1.1.5"
+    react-tinacms-editor "^0.2.0"
 
 tinacms@^0.15.0:
   version "0.15.0"

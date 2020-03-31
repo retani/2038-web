@@ -4,12 +4,16 @@ import { Droppable, Draggable } from "react-beautiful-dnd"
 import { AddIcon, DragIcon, ReorderIcon, TrashIcon } from "@tinacms/icons"
 import {
   padding,
-  color,
   radius,
-  font,
   IconButton,
   shadow,
 } from "@tinacms/styles"
+
+const color = {}
+color.grey= () => ("#888")
+
+const font = {}
+font.size= () => (16)
 
 export const AuthorsField = props => {
   const { input, field, form } = props
@@ -123,7 +127,6 @@ const Placeholder = styled.span`
 
 const ItemLabel = styled.label`
   margin: 0;
-  font-size: ${font.size(2)};
   font-weight: 500;
   flex: 1 1 auto;
   white-space: nowrap;

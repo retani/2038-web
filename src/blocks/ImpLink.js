@@ -5,7 +5,8 @@ import { Link } from '../components/Router'
 import ButtonSmall from '../components/ButtonSmall'
 import { p as P } from '../components/HtmlElements'
 
-export const ImpLink = ({text}) =>  {
+export const ImpLink = props =>  {
+  const {text} = props.data
   return <Container>
     <Link to="/imprint">
       <ButtonSmall textOffset="3px" theme="light">
