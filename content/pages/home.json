@@ -36,8 +36,8 @@
         "primary": false
       }
     ],
-    "image": "../images/undefined",
-    "large": true
+    "image": "../images/dummy-454x280-Orange.jpg",
+    "large": false
   },
   "displayTitle": false,
   "title": "Home"
