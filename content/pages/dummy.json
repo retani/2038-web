@@ -28,6 +28,7 @@
       "content": "## block content",
       "name": "dummy",
       "title": "dummy",
+      "file": "../pdfs/dummy.pdf",
       "center": false,
       "underline": true,
       "recipient": "dummy",

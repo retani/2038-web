@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import ButtonSmall from './ButtonSmall'
 import { p as P } from './HtmlElements'
 
-export default ({children, href, text, textOffset,size="small"}) =>  {
+export default ({children, href, text, textOffset, size="small"}) =>  {
 
   return <Container>
     <a href={href} download>

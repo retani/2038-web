@@ -7,3 +7,11 @@ export const onClientEntry = () => {
   })
 }
 */
+
+  
+import TinaCMSFileField from 'tinacms-file-field'
+
+export const onClientEntry = () => {
+  const fileField = new TinaCMSFileField(window.tinacms);
+  fileField.install();
+}

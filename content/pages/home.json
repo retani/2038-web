@@ -4,6 +4,29 @@
     {
       "videoId": "370256053",
       "text": "„For those who never experienced a change of the political system, it seemed unimaginable. But it happened and it could happen again.“",
+      "text2": "Conversation with Eyal Weizman",
+      "_template": "ArticleBlock",
+      "content": "",
+      "file": "../pdfs/undefined",
+      "frontmatter": {
+        "text": "<p>„For those who never experienced a change of the political system, it seemed unimaginable. But it happened and it could happen agan.“</p>"
+      }
+    },
+    {
+      "image": "",
+      "text": "ARTS OF THE WORKING CLASS\n            With texts by Olaf Grawert, Dorothee Hahn, Nils Havelka, Helene Hegemann, Holger Heissmeyer, Angelika Hinterbrandner, Nikolaus Hirsch, Fabrizio Hochschild Drummond, Ludger Hovestadt and many more",
+      "_template": "PublicationBlock",
+      "content": ""
+    },
+    {
+      "videoId": "",
+      "text": "legal bodies",
+      "_template": "LandscapeBlock",
+      "content": ""
+    },
+    {
+      "videoId": "370256053",
+      "text": "„For those who never experienced a change of the political system, it seemed unimaginable. But it happened and it could happen again.“",
       "text2": "Conversation with Charlotte Malterre",
       "_template": "TalkingHeadsBlock",
       "content": ""
@@ -23,6 +46,7 @@
     "headline": "Welcome to Tina Grande.",
     "textline": "This template is filled with sample content to get you started.",
     "ctas": [
+      {},
       {
         "label": "Read The Blog",
         "link": "/blog",
