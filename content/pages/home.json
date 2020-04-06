@@ -3,11 +3,11 @@
   "blocks": [
     {
       "videoId": "370256053",
-      "text": "„For those who {never} experienced a change of the political system, it seemed unimaginable. But it happened and it could happen again.“",
+      "text": "„For those who {never} experienced a change of the political system, it seemed unimaginable. But it {happened} and it could happen again.“",
       "text2": "Conversation with Eyal Weizman",
       "_template": "ArticleBlock",
       "content": "",
-      "file": "/pdfs/undefined",
+      "file": "/pdfs/7.pdf",
       "frontmatter": {
         "text": "<p>„For those who never experienced a change of the political system, it seemed unimaginable. But it happened and it could happen agan.“</p>"
       }
