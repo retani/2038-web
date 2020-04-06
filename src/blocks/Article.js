@@ -40,7 +40,7 @@ export const ArticleBlock = {
     file: ''
   },
   fields: [
-    { name: "text", label: "Text", component: "html" },
+    { name: "text", label: "Text", component: "textarea", description: "Use {} to highlight" },
     { name: "text2", label: "Small Text", component: "text" },
     {
       name: "file",
