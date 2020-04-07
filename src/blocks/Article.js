@@ -34,8 +34,8 @@ const parseText = function(text) {
       }
     }
   }
-  console.log(out);
-  return out.map(c => <Fragment key="x">{c}</Fragment>)
+  //console.log(out);
+  return out.map(c => <Fragment key={c.props.children}>{c}</Fragment>)
   //return text.replace(/\{/, '<mark>').replace(/\}/, '</mark>')  
 }
 

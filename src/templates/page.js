@@ -6,6 +6,7 @@ import { Content, ContentBlock } from "../blocks/content"
 import { Countdown, CountdownBlock } from "../blocks/Countdown"
 import { Landscape, LandscapeBlock } from "../blocks/Landscape"
 import { Publication, PublicationBlock } from "../blocks/Publication"
+import { News, NewsBlock } from "../blocks/News"
 import { Article, ArticleBlock } from "../blocks/Article"
 import { TalkingHeads, TalkingHeadsBlock } from '../blocks/TalkingHeads'
 import { ImpLink, ImpLinkBlock } from '../blocks/ImpLink'
@@ -44,6 +45,8 @@ export default function Page({ data }) {
                 return <Publication key={"PublicationBlock" + i} data={data} />
               case "ArticleBlock":
                 return <Article key={"ArticleBlock" + i} data={data} />                    
+              case "NewsBlock":
+                return <News key={"NewsBlock" + i} data={data} />                    
               case "ImpLinkBlock":
                 return <ImpLink key={"ImpLinkBlock" + i} data={data} />                                
               case "ContentBlock":
@@ -153,6 +156,7 @@ const PageForm = {
         PublicationBlock,
         LandscapeBlock,
         ArticleBlock,
+        NewsBlock,
         ImpLinkBlock
       },
     },
@@ -200,6 +204,10 @@ export const pageQuery = graphql`
           label
           inputType
           autocomplete
+        }
+        newsItems {
+          text
+          link
         }
         image {
           childImageSharp {
