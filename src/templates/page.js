@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`${globalStyles}`
 
 export default function Page({ data }) {
   const [page] = useLocalJsonForm(data.page, PageForm)
-  const blocks = page.blocks ? page.blocks : []
+  const blocks = (page && page.blocks) ? page.blocks : []
 
   return (
     <>

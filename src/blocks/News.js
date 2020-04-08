@@ -18,11 +18,11 @@ export function News({ data }) {
 
 function renderNewsItem(newsItem) {
   const {text, link} = newsItem
-  return <div>
+  return <div key={newsItem.link + newsItem.text + ""}>
     <P>
     +++ {text} +++
     </P>
-    <Link to={link}>
+    <Link to={link || "/"}>
       <ButtonSmall textOffset="3px" theme="light">
         Link
       </ButtonSmall>
