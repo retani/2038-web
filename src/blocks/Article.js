@@ -1,7 +1,7 @@
 import React, {Fragment} from "react"
 import styled from 'styled-components'
 
-import {p as P} from '../components/HtmlElements'
+//import {p as P} from '../components/HtmlElements'
 import DownloadLink from '../components/DownloadLink'
 
 export function Article({ data }) {
@@ -47,8 +47,11 @@ const SmallText = styled.p`
 `
 
 export const ArticleBlock = {
-  label: "Article",
   name: "article",
+  itemProps: (article) => ({
+    label: `Landscape: ${article.text}`,
+    key: `Landscape: ${article.text}`,
+  }),
   defaultItem: {
     text: `„It was due to the new system, that
         humanity redifined its relation to

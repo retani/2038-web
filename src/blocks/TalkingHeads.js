@@ -2,7 +2,6 @@ import React from "react"
 import MainVideo from '../components/MainVideo'
 
 export function TalkingHeads({ data }) {
-  console.log("TH id", data.videoId)
   return (
     <>
       <MainVideo vimeoId={data.videoId} />
@@ -15,6 +14,7 @@ export function TalkingHeads({ data }) {
 export const TalkingHeadsBlock = {
   label: "Talking Heads",
   name: "talkingHeads",
+  id: "th",
   defaultItem: {
     videoId: "370256053",
     text: "„For those who never experienced a change of the political system, it seemed unimaginable. But it happened and it could happen again.“",

@@ -35,6 +35,7 @@ const Text = styled.span`
 export const LandscapeBlock = {
   label: "Landscape",
   name: "landscape",
+  id:"landscape",
   defaultItem: {
     videoId: "115845843",
     text: "legal bodies",

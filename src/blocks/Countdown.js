@@ -30,7 +30,7 @@ function renderOffsetObject(distance) {
 
 export const Countdown = (data) =>  {
   
-  const {children, dateUTC} = data.data
+  const {dateUTC} = data.data
 
   const parts = dateUTC ? dateUTC.split("-") : "0-0-0-0-0"
   //if (parts.length !== 5) {
@@ -47,7 +47,7 @@ export const Countdown = (data) =>  {
     updateDimensions()
     window.addEventListener("resize", updateDimensions);
     return( () => window.removeEventListener("resize", updateDimensions))
-  }, [updateDimensions])
+  })
 
   const date = Date.UTC(parseInt(parts[0]), parseInt(parts[1])-1, parseInt(parts[2]), parseInt(parts[3]), parseInt(parts[4]))
 

@@ -1,9 +1,8 @@
-import React, {Fragment} from "react"
-import styled from 'styled-components'
+import React from "react"
+//import styled from 'styled-components'
 
 import {p as P} from '../components/HtmlElements'
 import ButtonSmall from '../components/ButtonSmall'
-import { Link } from '../components/Router'
 
 export function News({ data }) {
   console.log(data)
@@ -22,20 +21,26 @@ function renderNewsItem(newsItem) {
     <P>
     +++ {text} +++
     </P>
-    <Link to={link || "/"}>
+    <a href={link || "/"} title={link}>
       <ButtonSmall textOffset="3px" theme="light">
         Link
       </ButtonSmall>
-    </Link>  
+    </a>  
   </div>
 }
 
 export const NewsBlock = {
   label: "News",
   name: "news",
+  itemProps: item => ({
+    key: item.id,
+  }),
   defaultItem: {
     text: `Oditesto denitisquam nus quamend ipsam, sus ma dolut est voluptam diciis dem ut quas que qui quibusdamet ut et denitisquam nus quamend.`,
-    link: 'http://artsoftheworkingclass.org/'
+    link: 'http://artsoftheworkingclass.org/',
+    id: Math.random()
+    .toString(36)
+    .substr(2, 9),
   },
   fields: [
     {
@@ -46,6 +51,12 @@ export const NewsBlock = {
         key: item.text + item.link + "",
         label: "News Item",
       }),
+      defaultItem: () => ({
+        text: 'New News Item',
+        id: Math.random()
+          .toString(36)
+          .substr(2, 9),
+      }),      
       fields: [
         {
           label: "Text",

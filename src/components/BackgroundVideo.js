@@ -16,6 +16,7 @@ const MainVideo = ({vimeoId, children}) => {
             top:"50%"
           }}
           video={vimeoId}
+          autopause={false}
           responsive
           play={true}
           loop
