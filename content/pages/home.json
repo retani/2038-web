@@ -3,6 +3,13 @@
   "blocks": [
     {
       "videoId": "370256053",
+      "text": "„For those who never experienced a change of the political system, it seemed unimaginable. But it happened and it could happen again.“",
+      "text2": "Conversation with Charlotte Malterre",
+      "_template": "TalkingHeadsBlock",
+      "content": ""
+    },
+    {
+      "videoId": "370256053",
       "text": "Oditesto denitisquam nus quamend ipsam, sus ma dolut est voluptam diciis dem ut quas que qui quibusdamet ut et denitisquam nus quamend.",
       "text2": "Conversation with Eyal Weizman",
       "_template": "NewsBlock",
@@ -19,11 +26,11 @@
       ],
       "newsItems": [
         {
-          "text": "Has"
+          "text": "1234s56m",
+          "link": "hjjkmf"
         },
         {
-          "text": "1234s56",
-          "link": "hj"
+          "text": "Hasjmrfv"
         }
       ]
     },
@@ -51,13 +58,6 @@
       "content": ""
     },
     {
-      "videoId": "370256053",
-      "text": "„For those who never experienced a change of the political system, it seemed unimaginable. But it happened and it could happen again.“",
-      "text2": "Conversation with Charlotte Malterre",
-      "_template": "TalkingHeadsBlock",
-      "content": ""
-    },
-    {
       "dateUTC": "2020-08-28-14-02",
       "_template": "CountdownBlock",
       "content": ""
@@ -72,7 +72,10 @@
     "headline": "Welcome to Tina Grande.",
     "textline": "This template is filled with sample content to get you started.",
     "ctas": [
-      {},
+      {
+        "label": "ferferf",
+        "link": "ef"
+      },
       {
         "label": "Read The Blog",
         "link": "/blog",
