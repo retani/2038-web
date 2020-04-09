@@ -3,13 +3,19 @@
   "blocks": [
     {
       "videoId": "370256053",
-      "text": "„For those who never experienced a change of the political system, it seemed unimaginable. But it happened and it could happen again.“",
+      "text": "„For those who never mexperienced a change of the political system, it seemed unimaginable. But it happened and it could happen again.“",
       "text2": "Conversation with Charlotte Malterre",
       "_template": "TalkingHeadsBlock",
       "content": ""
     },
     {
-      "text": "„It was due to the new system, that\nhumanity redifined its relation to\n        nnature. Today, {nature is an active\n        political agent: land, water, air and\n        light cannot be owned anymore.}“",
+      "image": "../images/glas-1920x1080.jpg",
+      "text": "ARTS OF THE WORKING CLASS\n            With texts by Olaf Grawert, Dorothee Hahn, Nils Havelka, Helene Hegemann, Holger Heissmeyer, Angelika Hinterbrandner, Nikolaus Hirsch, Fabrizio Hochschild Drummond, Ludger Hovestadt and many more",
+      "_template": "PublicationBlock",
+      "content": ""
+    },
+    {
+      "text": "„It was due to the new system, that\nhumanity redifined its relation to\n        nature. Today, {nature is an active\n        political agent: land, water, air and\n        light cannot be owned anymore.}“",
       "text2": "Conversation with Eyal Weizman",
       "file": "",
       "_template": "ArticleBlock",
@@ -23,7 +29,7 @@
     },
     {
       "videoId": "404648675",
-      "text": "illegal bodies",
+      "text": "illegal bodiesn",
       "_template": "LandscapeBlock",
       "content": ""
     },
@@ -39,15 +45,10 @@
       }
     },
     {
-      "image": "",
-      "text": "ARTS OF THE WORKING CLASS\n            With texts by Olaf Grawert, Dorothee Hahn, Nils Havelka, Helene Hegemann, Holger Heissmeyer, Angelika Hinterbrandner, Nikolaus Hirsch, Fabrizio Hochschild Drummond, Ludger Hovestadt and many more",
-      "_template": "PublicationBlock",
-      "content": ""
-    },
-    {
       "dateUTC": "2020-08-28-14-02",
-      "_template": "CountdownBlock",
-      "content": ""
+      "_template": "PublicationBlock",
+      "content": "",
+      "image": ""
     },
     {
       "dateUTC": "2020-08-28-14-00",
