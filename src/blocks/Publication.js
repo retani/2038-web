@@ -7,6 +7,8 @@ import Document from '../components/Document'
 import {p as P} from '../components/HtmlElements'
 import DownloadLink from '../components/DownloadLink'
 
+const blockLabel = "PUBLICATION"
+
 export function Publication({ data }) {
   const {text} = data
   return (
@@ -26,15 +28,19 @@ export function Publication({ data }) {
 }
 
 export const PublicationBlock = {
-  label: "Publication",
+  label: blockLabel,
   name: "publication",
+  itemProps: (item) => ({
+    label: `${blockLabel}: ${item.text}`,
+    key: `${blockLabel}: ${item.text}`,
+  }),  
   defaultItem: {
     image: "",
     text: `ARTS OF THE WORKING CLASS
             With texts by Olaf Grawert, Dorothee Hahn, Nils Havelka, Helene Hegemann, Holger Heissmeyer, Angelika Hinterbrandner, Nikolaus Hirsch, Fabrizio Hochschild Drummond, Ludger Hovestadt and many more`,
   },
   fields: [
-    { name: "text", label: "Text", component: "text" },
+    { name: "text", label: "Text", component: "textarea" },
     {
       label: "Image",
       name: "image",

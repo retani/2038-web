@@ -2,6 +2,8 @@ import React from "react"
 import styled from 'styled-components'
 import BackgroundVideo from "../components/BackgroundVideo"
 
+const blockLabel = "LANDSCAPE"
+
 export function Landscape({ data }) {
   const {text, videoId } = data
   return (
@@ -33,9 +35,13 @@ const Text = styled.span`
 `
 
 export const LandscapeBlock = {
-  label: "Landscape",
+  label: blockLabel,
   name: "landscape",
   id:"landscape",
+  itemProps: (item) => ({
+    label: `${blockLabel}: ${item.text}`,
+    key: `${blockLabel}: ${item.text}`,
+  }),
   defaultItem: {
     videoId: "115845843",
     text: "legal bodies",

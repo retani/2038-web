@@ -4,6 +4,8 @@ import React from "react"
 import {p as P} from '../components/HtmlElements'
 import ButtonSmall from '../components/ButtonSmall'
 
+const blockLabel = "NEWS"
+
 export function News({ data }) {
   console.log(data)
   const {newsItems} = data
@@ -30,14 +32,13 @@ function renderNewsItem(newsItem) {
 }
 
 export const NewsBlock = {
-  label: "News",
+  label: blockLabel,
   name: "news",
-  itemProps: item => ({
-    key: item.id,
+  itemProps: (item) => ({
+    label: `${blockLabel}`,
+    key: `${blockLabel} ${item.id}`,
   }),
   defaultItem: {
-    text: `Oditesto denitisquam nus quamend ipsam, sus ma dolut est voluptam diciis dem ut quas que qui quibusdamet ut et denitisquam nus quamend.`,
-    link: 'http://artsoftheworkingclass.org/',
     id: Math.random()
     .toString(36)
     .substr(2, 9),
@@ -49,7 +50,7 @@ export const NewsBlock = {
       component: "group-list",
       itemProps: item => ({
         key: item.text + item.link + "",
-        label: "News Item",
+        label: item.text,
       }),
       defaultItem: () => ({
         text: 'New News Item',

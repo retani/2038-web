@@ -6,6 +6,8 @@ import Accordion from '../components/Accordion'
 import DownloadLink from '../components/DownloadLink'
 import Spacer from '../components/Spacer'
 
+const blockLabel = "COUNTDOWN"
+
 const numberTimes = {
   week: 1000 * 60 * 60 * 24 * 7,
   day: 1000 * 60 * 60 * 24,
@@ -86,9 +88,13 @@ export const Countdown = (data) =>  {
 }
 
 export const CountdownBlock = {
-  label: "Countdown",
+  label: blockLabel,
   name: "countdown",
   key: "dunno",
+  itemProps: (item) => ({
+    label: `${blockLabel}: ${item.dateUTC}`,
+    key: `${blockLabel}: ${item.dateUTC}`,
+  }),    
   defaultItem: {
     dateUTC: "2020-08-28-14-00",
   },

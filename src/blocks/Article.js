@@ -48,9 +48,10 @@ const SmallText = styled.p`
 
 export const ArticleBlock = {
   name: "article",
+  label: "ARTICLE",
   itemProps: (article) => ({
-    label: `Landscape: ${article.text}`,
-    key: `Landscape: ${article.text}`,
+    label: `ARTICLE: ${article.text}`,
+    key: `ARTICLE: ${article.text}`,
   }),
   defaultItem: {
     text: `„It was due to the new system, that

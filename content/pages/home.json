@@ -3,7 +3,7 @@
   "blocks": [
     {
       "videoId": "370256053",
-      "text": "„For those who never mexperienced a change of the political system, it seemed unimaginable. But it happened and it could happen again.“",
+      "text": "„For those who never experienced a change of the political system, it seemed unimaginable. But it happened and it could happen again.“",
       "text2": "Conversation with Charlotte Malterre",
       "_template": "TalkingHeadsBlock",
       "content": ""
@@ -48,7 +48,8 @@
       "dateUTC": "2020-08-28-14-02",
       "_template": "PublicationBlock",
       "content": "",
-      "image": ""
+      "image": "",
+      "text": "n"
     },
     {
       "dateUTC": "2020-08-28-14-00",
