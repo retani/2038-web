@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 import { colors, dist, metrics, breakpoints } from '../../config/styles'
@@ -9,12 +9,14 @@ let firstMount = true
 export default ({children, head, contentStyle, backgroundColorClosed, backgroundColorOpen, style, initOpen}) =>  {
   const [isOpen, setIsOpen] = useState(false);
   const [height, setHeight] = useState(0);
+  
+  let innerContentElem = useRef(null)
 
-  let innerContentElem = null
   const backgroundColor = backgroundColorClosed && backgroundColorOpen ? ( isOpen ? backgroundColorOpen : backgroundColorClosed ) : null
 
   const toggle = () => {
-    setHeight(!isOpen ? innerContentElem.clientHeight + "px" : 0)
+    console.log(innerContentElem)
+    setHeight(!isOpen ? innerContentElem.current.clientHeight + "px" : 0)
     setIsOpen(!isOpen, )
   }
 
@@ -47,7 +49,7 @@ export default ({children, head, contentStyle, backgroundColorClosed, background
       </HeadText>
     </Head>
     <Content isOpen={isOpen} height={height}>
-      <InnerContent ref={elem => innerContentElem=elem} style={contentStyle}>
+      <InnerContent ref={innerContentElem} style={contentStyle}>
         {children}
       </InnerContent>
     </Content>
