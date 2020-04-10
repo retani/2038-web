@@ -7,6 +7,7 @@ import { Countdown, CountdownBlock } from "../blocks/Countdown"
 import { Landscape, LandscapeBlock } from "../blocks/Landscape"
 import { Publication, PublicationBlock } from "../blocks/Publication"
 import { News, NewsBlock } from "../blocks/News"
+import { With, WithBlock } from "../blocks/With"
 import { Article, ArticleBlock } from "../blocks/Article"
 import { TalkingHeads, TalkingHeadsBlock } from '../blocks/TalkingHeads'
 import { ImpLink, ImpLinkBlock } from '../blocks/ImpLink'
@@ -45,6 +46,8 @@ export default function Page({ data }) {
                 return <Publication key={"PublicationBlock" + i} data={data} />
               case "ArticleBlock":
                 return <Article key={"ArticleBlock" + i} data={data} />                    
+              case "WithBlock":
+                return <With key={"WithBlock" + i} data={data} />
               case "NewsBlock":
                 return <News key={"NewsBlock" + i} data={data} />                    
               case "ImpLinkBlock":
@@ -157,6 +160,7 @@ const PageForm = {
         LandscapeBlock,
         ArticleBlock,
         NewsBlock,
+        WithBlock,
         ImpLinkBlock
       },
     },
