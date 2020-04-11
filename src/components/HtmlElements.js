@@ -2,20 +2,8 @@ import styled from 'styled-components'
 import { Link } from './Router'
 
 import { dist, snippets, breakpoints } from '../../config/styles'
- 
-const blockStyle = `
-  ${snippets.typography.topAdjust};
 
-  padding-bottom: ${dist.spacer};
-  margin-left: ${ dist.spacer };
-  margin-right: ${ dist.spacer };
-  @media ${ breakpoints.small } {
-    padding-bottom: ${dist.smallSpacer};
-    margin-left: ${ dist.smallSpacer };
-    margin-right: ${ dist.smallSpacer };
-  }
-  white-space: pre-wrap;
-`
+const blockStyle = snippets.blockStyle
 
 const BlockStyleDiv = styled.div`
   ${blockStyle}

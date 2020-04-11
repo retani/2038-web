@@ -1,15 +1,16 @@
 import React from "react"
 import MainVideo from '../components/MainVideo'
+import Document from '../components/Document'
 
 const blockLabel = "TALKING HEADS"
 
 export function TalkingHeads({ data }) {
   return (
-    <>
+    <Document>
       <MainVideo vimeoId={data.videoId} />
       {data.text}
       {data.text2}
-    </>
+    </Document>
   )
 }
 

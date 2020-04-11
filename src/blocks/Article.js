@@ -3,11 +3,16 @@ import styled from 'styled-components'
 
 //import {p as P} from '../components/HtmlElements'
 import DownloadLink from '../components/DownloadLink'
+import Spacer from '../components/Spacer'
+import { p as P } from '../components/HtmlElements'
+
+import { colors } from '../../config/styles'
 
 export function Article({ data }) {
   const {text, text2, file} = data
   return (
-    <>
+    <Container>
+      <Spacer />
       <LargeText>
         {parseText(text)}
       </LargeText>
@@ -15,7 +20,7 @@ export function Article({ data }) {
         {text2}
       </SmallText>      
       <DownloadLink title={file} text=".PDF" href={file} />
-    </>
+    </Container>
   )
 }
 
@@ -39,11 +44,15 @@ const parseText = function(text) {
   //return text.replace(/\{/, '<mark>').replace(/\}/, '</mark>')  
 }
 
-const LargeText = styled.p`
+const Container = styled.div`
+  background-color: ${colors.white};
+`
+
+const LargeText = styled(P)`
   font-size: 30px;
 `
 
-const SmallText = styled.p`
+const SmallText = styled(P)`
 `
 
 export const ArticleBlock = {

@@ -3,10 +3,26 @@
   "blocks": [
     {
       "videoId": "370256053",
-      "text": "„For those who never dexperienced a change of the political system, it seemed unimaginable. But it happened and it could happen again.“",
-      "text2": "Conversation with Charlotte Malterre",
-      "_template": "TalkingHeadsBlock",
+      "text": "Today, in the year 2038, we have mastered the large crises. It was a close call, yet, we just about made it. After the total financial melt-down in the year 2022, the world came to its senses. We live in radical democracy and radical bureaucracy, in a society, that knows neither hero nor villain. In a series of films, the German Pavillon shows how we arrived at this era of New Serenity.",
+      "text2": "The German Pavillon at the Architecture Biennale 2020",
+      "_template": "IntroVideoBlock",
       "content": ""
+    },
+    {
+      "dateUTC": "2020-08-28-14-00",
+      "_template": "CountdownBlock",
+      "content": ""
+    },
+    {
+      "videoId": "370256053",
+      "text": "„For those who {never experienced} a change of the political system, it seemed unimaginable. But it   it could happen again.“",
+      "text2": "Conversation with Eyal Weizman",
+      "_template": "ArticleBlock",
+      "content": "",
+      "file": "/pdfs/7.pdf",
+      "frontmatter": {
+        "text": "<p>„For those who never experienced a change of the political system, it seemed unimaginable. But it happened and it could happen agan.“</p>"
+      }
     },
     {
       "image": "../images/glas-1920x1080.jpg",
@@ -18,22 +34,6 @@
       "videoId": "115845843",
       "text": "legal bodies",
       "_template": "LandscapeBlock",
-      "content": ""
-    },
-    {
-      "videoId": "370256053",
-      "text": "„For those who {never experienced} a change of the political system, it seemed unimaginable. But it  d it could happen again.“",
-      "text2": "Conversation with Eyal Weizman",
-      "_template": "ArticleBlock",
-      "content": "",
-      "file": "/pdfs/7.pdf",
-      "frontmatter": {
-        "text": "<p>„For those who never experienced a change of the political system, it seemed unimaginable. But it happened and it could happen agan.“</p>"
-      }
-    },
-    {
-      "dateUTC": "2020-08-28-14-00",
-      "_template": "CountdownBlock",
       "content": ""
     },
     {

@@ -43,7 +43,7 @@ const colors = {
   green: "#00ff00",
 }
 
-const snippets = {
+let snippets = {
   typography: {
     topAdjust: `
       position: relative;
@@ -61,9 +61,24 @@ const snippets = {
       box-shadow:
         inset 0px -0.1em ${colors.bg},
         inset 0 -0.2em #000;
-    `
+    `,
   }
 }
+
+snippets.blockStyle = `
+  ${snippets.typography.topAdjust};
+  padding-bottom: ${dist.spacer};
+  margin-left: ${ dist.spacer };
+  margin-right: ${ dist.spacer };
+  padding-left: 10px;
+  padding-right: 10px;  
+  @media ${ breakpoints.small } {
+    padding-bottom: ${dist.smallSpacer};
+    margin-left: ${ dist.smallSpacer };
+    margin-right: ${ dist.smallSpacer };
+  }
+  white-space: pre-wrap;
+`
 
 /*
   border-style: solid;
@@ -126,5 +141,5 @@ export {
   dist,
   colors,
   snippets,
-  breakpoints
+  breakpoints,
 }

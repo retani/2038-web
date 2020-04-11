@@ -8,6 +8,7 @@ import { Landscape, LandscapeBlock } from "../blocks/Landscape"
 import { Publication, PublicationBlock } from "../blocks/Publication"
 import { News, NewsBlock } from "../blocks/News"
 import { With, WithBlock } from "../blocks/With"
+import { IntroVideo, IntroVideoBlock } from "../blocks/IntroVideo"
 import { Article, ArticleBlock } from "../blocks/Article"
 import { TalkingHeads, TalkingHeadsBlock } from '../blocks/TalkingHeads'
 import { ImpLink, ImpLinkBlock } from '../blocks/ImpLink'
@@ -46,6 +47,8 @@ export default function Page({ data }) {
                 return <Publication key={"PublicationBlock" + i} data={data} />
               case "ArticleBlock":
                 return <Article key={"ArticleBlock" + i} data={data} />                    
+              case "IntroVideoBlock":
+                return <IntroVideo key={"IntroVideoBlock" + i} data={data} />
               case "WithBlock":
                 return <With key={"WithBlock" + i} data={data} />
               case "NewsBlock":
@@ -159,6 +162,7 @@ const PageForm = {
         PublicationBlock,
         LandscapeBlock,
         ArticleBlock,
+        IntroVideoBlock,
         NewsBlock,
         WithBlock,
         ImpLinkBlock

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { dist, colors, metrics, breakpoints } from '../../config/styles'
+import { snippets, colors, metrics, breakpoints } from '../../config/styles'
 
 export default ({children}) =>  <Center>
     <Container>
@@ -22,8 +22,9 @@ const Container = styled.div`
     max-width: 780px; /* Textbreite 700px */
     margin-left: 120px;
     margin-right: 120px;
-    padding-left: 10px;
-    padding-right: 10px;
+  }
+  p {
+    ${snippets.blockStyle}
   }
 `
 
