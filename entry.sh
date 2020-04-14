@@ -15,7 +15,7 @@ then
   rm -rf $GATSBY_DIR/public
   gatsby build
 
-elif  [ "$1" == "stage" ]
+elif  [ "$1" == "serve" ]
 then
   rm -rf $GATSBY_DIR/public
   gatsby build
