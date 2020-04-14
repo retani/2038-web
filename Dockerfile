@@ -12,11 +12,10 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install and cache app dependencies using yarn
 ADD package.json yarn.lock /app/
 RUN yarn --pure-lockfile
+RUN gatsby telemetry --disable
 
 # Copy all frontend stuff to new "app" folder
 COPY . /app/
-
-WORKDIR /app
 
 #ENV PATH="/usr/local/bin:/app/node_modules/.bin:${PATH}"
 
