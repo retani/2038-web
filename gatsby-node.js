@@ -109,7 +109,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     {
       pages: allPagesJson(
-        filter: { path: { ne: null }, listType: { eq: null } }
+        filter: { path: { ne: null } }
       ) {
         edges {
           node {
